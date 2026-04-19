@@ -1,0 +1,227 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.page-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+.left-panel {
+    flex: 1; /* Takes 1 part of available space */
+    background-color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align content to the left */
+    max-width: 600px; /* Limit width of left panel */
+    min-width: 320px; /* Ensure a minimum width */
+    box-sizing: border-box; /* Include padding in width */
+    position: relative; /* For logo positioning */
+}
+
+.logo-header {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.wayup-logo {
+    width: 100px; /* Adjust logo size */
+}
+
+.form-section {
+    width: 100%;
+    max-width: 350px; /* Max width for the form content itself */
+    margin-top: 60px; /* Space for the logo at the top */
+}
+
+.welcome-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: left;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative; /* For error message positioning */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.input-group input.input-error {
+    border-color: #e74c3c; /* Red border for error */
+}
+
+.error-message {
+    color: #e74c3c; /* Red text for error */
+    font-size: 0.85em;
+    margin-top: 5px;
+    text-align: left;
+    display: none; /* Hidden by default */
+}
+
+.log-in-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.log-in-button:hover {
+    background-color: #357ABD;
+}
+
+.account-link,
+.job-search-link,
+.terms-policy {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px; /* Spacing between text lines */
+    text-align: left;
+}
+
+.terms-policy {
+    font-size: 0.8em; /* Slightly smaller for terms */
+    margin-top: 30px; /* More space above terms */
+}
+
+.link {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.right-panel {
+    flex: 2; /* Takes 2 parts of available space, making it wider */
+    background: url('https://assets.website-files.com/5f8ef8544a42b173161c5c56/5f9024c0243fe87b9956d443_Background_Wave_Login.svg') no-repeat center center;
+    background-size: cover; /* Cover the entire panel */
+    background-color: #4a90e2; /* Fallback background color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .left-panel {
+        padding: 30px;
+    }
+    .logo-header {
+        top: 30px;
+        left: 30px;
+    }
+    .form-section {
+        margin-top: 50px;
+        max-width: 300px;
+    }
+    .welcome-title {
+        font-size: 2em;
+    }
+    .input-group input,
+    .log-in-button {
+        padding: 10px;
+        font-size: 1em;
+    }
+    .account-link,
+    .job-search-link,
+    .terms-policy {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 768px) {
+    .right-panel {
+        display: none; /* Hide right panel on smaller screens */
+    }
+    .left-panel {
+        flex: none; /* Reset flex */
+        width: 100%; /* Take full width */
+        max-width: 100%; /* Ensure it spans fully */
+        justify-content: flex-start; /* Align content to top */
+        align-items: center; /* Center content horizontally */
+        padding: 20px;
+    }
+    .logo-header {
+        position: static; /* Remove absolute positioning */
+        margin-bottom: 20px; /* Add margin below logo */
+    }
+    .form-section {
+        margin-top: 20px; /* Adjust margin */
+        width: 90%; /* Max width for form */
+        max-width: 350px; /* Keep consistent form width */
+    }
+    .welcome-title {
+        text-align: center; /* Center title on mobile */
+    }
+    .account-link,
+    .job-search-link,
+    .terms-policy {
+        text-align: center; /* Center links on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .left-panel {
+        padding: 15px;
+    }
+    .wayup-logo {
+        width: 80px;
+    }
+    .welcome-title {
+        font-size: 1.8em;
+    }
+    .input-group input,
+    .log-in-button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    .error-message {
+        font-size: 0.8em;
+    }
+    .account-link,
+    .job-search-link,
+    .terms-policy {
+        font-size: 0.8em;
+    }
+}

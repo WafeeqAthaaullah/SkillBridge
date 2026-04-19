@@ -1,0 +1,141 @@
+/* Styles specific to the View Internship Applications page */
+
+/* Reusing form-card for filter and list sections, but adjusting positioning */
+.applications-filter-section,
+.applications-list-section {
+    max-width: 1000px; /* Adjust max-width for application sections */
+    margin: 40px auto; /* Center them */
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* NEW: Style for the non-modal Application Details section */
+.applications-detail-section {
+    max-width: 800px; /* Adjust max-width for the detail section */
+    margin: 40px auto; /* Center it */
+    padding: 30px;
+    box-sizing: border-box;
+    /* text-align: left; /* Ensure text inside is left-aligned by default */
+}
+
+
+.applications-filter-section .input-group label,
+.applications-list-section .dashboard-section-subtitle {
+    text-align: left; /* Align labels and subtitles to the left */
+}
+
+/* Table styles (reusing .data-table but ensuring it looks good) */
+.applications-list-section .data-table {
+    width: 100%; /* Ensure table takes full width of its container */
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.applications-list-section .data-table th,
+.applications-list-section .data-table td {
+    white-space: nowrap; /* Prevent wrapping in table cells */
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    text-align: center; /* <<< IMPORTANT: Centers content WITHIN each table cell */
+    vertical-align: middle; /* Vertically align content in the middle */
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.8em;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    min-width: 90px; /* Ensure consistent width for badges */
+    text-align: center; /* Ensures text within the badge is centered */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.status-pending { background-color: #ffc107; /* Orange/Yellow */ color: #343a40; } /* Text color adjusted for contrast */
+.status-reviewed { background-color: #17a2b8; /* Cyan */ }
+.status-interview-scheduled { background-color: #6f42c1; /* Purple */ }
+.status-accepted { background-color: #28a745; /* Green */ }
+.status-rejected { background-color: #dc3545; /* Red */ }
+
+
+/* --- REMOVE ALL .modal and .modal-content STYLES --- */
+/* Delete the entire .modal { ... } block */
+/* Delete the entire .modal-content { ... } block */
+/* Delete the entire .modal-content .close-button { ... } block */
+/* Delete the entire .modal-content .close-button:hover, .modal-content .close-button:focus { ... } block */
+
+/* --- RETAIN & RE-TARGET Styles for elements that were inside the modal, now in a section --- */
+
+/* Modal title reused as section title */
+.modal-title { /* For the new section's title */
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Centers the section title */
+}
+
+/* Modal body content styles reused */
+.modal-body p {
+    margin-bottom: 10px;
+    text-align: left; /* Ensure paragraphs are left-aligned */
+}
+
+.modal-body strong {
+    color: #333;
+}
+
+.modal-body h4 { /* For "Update Status" heading */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center; /* Centers the "Update Status" heading */
+}
+
+.modal-body .input-group {
+    text-align: left; /* Ensure input groups remain left-aligned */
+}
+.modal-body .input-group label {
+    text-align: left; /* Ensure labels within input groups are left-aligned */
+}
+
+
+.modal-body .link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Re-target form-actions for the detail section */
+.applications-detail-section .form-actions { /* Target form-actions ONLY inside the new section */
+    display: flex;
+    justify-content: center; /* Centers buttons within the detail section */
+    gap: 15px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+/* Responsive adjustments for this page */
+/* ... (Keep your existing @media queries, ensure they target the new section correctly if specific adjustments are needed) ... */
+
+@media (max-width: 768px) {
+    /* ... (existing responsive rules) ... */
+    .applications-filter-section .form-actions,
+    /* Remove this line as .modal no longer exists: .modal .form-actions { */
+    .applications-detail-section .form-actions { /* Target the new section's form-actions */
+        flex-direction: column;
+        align-items: center;
+    }
+    .applications-filter-section .btn-primary,
+    .applications-filter-section .btn-secondary,
+    /* Remove this line: .modal .btn-primary, .modal .btn-secondary { */
+    .applications-detail-section .btn-primary, /* Target the new section's buttons */
+    .applications-detail-section .btn-secondary {
+        width: 100%;
+        margin-bottom: 10px; /* Space between stacked buttons */
+    }
+    /* ... (rest of your @media 768px rules) ... */
+}

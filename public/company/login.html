@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillbridge - Company Log In</title>
+    <link rel="stylesheet" href="css\loginF.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <div class="left-panel">
+            <header class="logo-header">
+                <img src="../images/logo_black-removebg-preview.png" alt="Skillbridge logo" class="wayup-logo">
+            </header>
+            <main class="form-section">
+                <h2 class="welcome-title">Welcome Back!</h2>
+                <form id="loginForm" class="login-form" novalidate>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <div class="error-message" id="emailError">Email is required.</div>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" placeholder="Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                        <div class="error-message" id="passwordError">Password must be at least 8 characters long and contain at least one letter and one number.</div>
+                    </div>
+                    <button type="submit" class="log-in-button">Log In</button>
+                </form>
+
+                <p class="account-link">Don't have an account? <a href="signup.html" class="link">Sign Up</a></p>
+                <p class="job-search-link">Job Searching? <a href="../student/loginpage.html" class="link">Click Here</a> to access thousands of jobs.</p>
+
+                <p class="terms-policy">
+                    By registering you agree to our <a href="#" class="link">Terms and Conditions</a> and <a href="#" class="link">Privacy Policy</a>.
+                </p>
+            </main>
+        </div>
+        <div class="right-panel">
+            </div>
+    </div>
+    <script src="scripts/loginscript.js"></script>
+</body>
+</html>

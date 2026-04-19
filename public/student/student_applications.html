@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications</title>
+    <link rel="stylesheet" href="css/company_portal.css"> <link rel="stylesheet" href="css/student_applications_style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo">
+            <img src="../images/logo_white-removebg-preview.png" alt="Platform Logo">
+        </div>
+        <h1 class="dashboard-header-title">My Applications</h1>
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="student_dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="internships.html"><i class="fas fa-briefcase"></i> Internships</a></li>
+                <li><a href="student_applications.html" class="active"><i class="fas fa-file-alt"></i> My Applications</a></li>
+                <li><a href="student_profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="../logout.html" id="logoutButton"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile dropdown">
+            <span id="studentNameDisplay">Student Name</span>
+        </div>
+    </header>
+
+    <main class="dashboard-main-content">
+        <h2 class="dashboard-section-title">Your Internship Application History</h2>
+
+        <section class="applications-list-section form-card">
+            <div id="applicationsContainer">
+                <p class="no-applications" id="noApplicationsMessage" style="display:none;">You haven't submitted any internship applications yet. <a href="internships.html">Browse internships here!</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/student_applications.js"></script>
+</body>
+</html>

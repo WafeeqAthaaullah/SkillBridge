@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WayUp - Let's get you hired</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Your existing CSS here */
+        body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4a90e2, #2d5b8d); /* Blue gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px; /* Adjust as needed */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.logo img {
+    width: 120px; /* Adjust logo size */
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header-subtitle {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Main Content - Form Card */
+.main-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.form-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-title {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.social-signup-button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 12px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.social-signup-button:hover {
+    background-color: #f5f5f5;
+}
+
+.google-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.or-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    color: #888;
+}
+
+.or-separator::before,
+.or-separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.or-separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.or-separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+.terms-text {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.terms-text .link {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.terms-text .link:hover {
+    text-decoration: underline;
+}
+
+.sign-up-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sign-up-button:hover {
+    background-color: #357ABD;
+}
+
+.login-text {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.login-text .link {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-text .link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9em;
+}
+
+.company-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Space between logos */
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.company-logo {
+    height: 40px; /* Adjust logo height */
+    filter: brightness(0) invert(1); /* Makes logos white for the dark background */
+    opacity: 0.7; /* Adjust opacity */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2em;
+    }
+
+    .header-subtitle {
+        font-size: 1em;
+        padding: 0 15px;
+    }
+
+    .form-card {
+        padding: 30px 20px;
+        margin: 0 15px; /* Add horizontal margin on smaller screens */
+    }
+
+    .company-logos {
+        gap: 20px;
+    }
+
+    .company-logo {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.8em;
+    }
+
+    .form-title {
+        font-size: 1.5em;
+    }
+
+    .social-signup-button, .sign-up-button, .input-group input {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+
+    .terms-text, .login-text {
+        font-size: 0.8em;
+    }
+
+    .company-logo {
+        height: 30px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title">Let's get you hired</h1>
+            <p class="header-subtitle">WayUp is the go-to platform to land internships and entry-level jobs. Search opportunities, get career advice, and connect directly with employers.</p>
+        </header>
+
+        <main class="main-content">
+            <div class="form-card">
+                <h2 class="form-title">Create your free account!</h2>
+
+                <button class="social-signup-button google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google logo" class="google-logo">
+                    Sign up with Google
+                </button>
+
+                <div class="or-separator">
+                    <span>or sign up with your email address</span>
+                </div>
+
+                <form class="signup-form">
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder="Your Name" required> </div>
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email" required> </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Create password" required> </div>
+
+                    <p class="terms-text">
+                        By registering you agree to our <a href="#" class="link">Terms and Conditions</a> and <a href="#" class="link">Privacy Policy</a>.
+                    </p>
+
+                    <button type="submit" class="sign-up-button">Sign Up</button>
+                </form>
+
+                <p class="login-text">Already have an account? <a href="loginpage.html" class="link">Log In</a></p>
+            </div>
+        </main>
+
+    </div>
+    <script src="/student/scripts/signupscript.js"></script>
+</body>
+</html>

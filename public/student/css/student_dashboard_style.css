@@ -1,0 +1,249 @@
+/* Styles specific to the Student Dashboard page */
+
+.dashboard-main-content {
+    padding: 20px;
+}
+
+.dashboard-section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.dashboard-section-title #welcomeStudentName {
+    color: lightgray; /* Highlight student name */
+}
+
+/* Summary Cards Section */
+.dashboard-summary-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.summary-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    width: 280px; /* Fixed width for cards */
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.summary-card h3 i {
+    font-size: 1.5em;
+}
+
+.summary-card .summary-value {
+    font-size: 3em;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 20px;
+    line-height: 1; /* Adjust line height for big numbers */
+}
+
+.summary-card .card-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.summary-card .card-link:hover {
+    color: #0056b3;
+}
+
+/* Icon Colors for Summary Cards */
+.summary-card .icon-primary { color: #007bff; }
+.summary-card .icon-success { color: #28a745; }
+.summary-card .icon-info { color: #17a2b8; }
+
+
+/* General Dashboard Section Styling (for recent applications and recommendations) */
+.dashboard-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin: 40px auto; /* Center sections */
+    max-width: 1100px;
+    box-sizing: border-box;
+}
+
+.dashboard-section-subtitle {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Table styles for Recent Applications (reusing .data-table from company_portal.css) */
+.recent-applications .data-table th,
+.recent-applications .data-table td {
+    white-space: nowrap; /* Prevent wrapping in table cells */
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+/* Internship Cards for Recommended Internships */
+.internship-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.internship-card {
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px; /* Ensure consistent card height */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.internship-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.internship-card h4 {
+    font-size: 1.2em;
+    color: #007bff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.internship-card p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.internship-card .card-company {
+    font-weight: 500;
+    color: #666;
+}
+
+.internship-card .card-location {
+    font-style: italic;
+    color: #777;
+}
+
+.internship-card .card-skills {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 10px;
+    white-space: normal; /* Allow skills to wrap */
+}
+
+.internship-card .card-actions {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.internship-card .card-actions .btn-primary {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    text-decoration: none; /* Make sure it looks like a button */
+    display: inline-block; /* Ensure padding and width work */
+}
+
+/* Common "No Data" message style */
+.no-data {
+    text-align: center;
+    color: #888;
+    padding: 20px 0;
+    font-style: italic;
+}
+
+/* View All Link */
+.view-all-link {
+    text-align: right;
+    margin-top: 25px;
+}
+
+.view-all-link .btn-secondary {
+    padding: 10px 20px;
+    font-size: 1em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .dashboard-section {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-section-title {
+        font-size: 1.8em;
+    }
+    .dashboard-summary-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .summary-card {
+        width: 90%;
+        max-width: 350px;
+    }
+    .dashboard-section {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .dashboard-section-subtitle {
+        font-size: 1.5em;
+    }
+    .internship-cards-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    /* Hide some columns for better table readability on small screens */
+    .recent-applications .data-table thead th:nth-child(2), /* Company */
+    .recent-applications .data-table tbody td:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .recent-applications .data-table thead th:nth-child(3), /* Submitted On */
+    .recent-applications .data-table tbody td:nth-child(3) {
+        display: none;
+    }
+}

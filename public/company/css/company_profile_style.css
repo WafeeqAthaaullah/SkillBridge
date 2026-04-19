@@ -1,0 +1,121 @@
+/* Styles specific to the Company Profile Management page */
+
+.company-profile-section {
+    max-width: 800px; /* Max width for the profile form card */
+    margin: 40px auto; /* Center the section */
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.company-profile-section .dashboard-section-subtitle {
+    text-align: left; /* Align subtitle to the left */
+}
+
+.company-profile-section .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+}
+
+.company-profile-section .input-group input[type="text"],
+.company-profile-section .input-group input[type="email"],
+.company-profile-section .input-group input[type="tel"],
+.company-profile-section .input-group input[type="url"],
+.company-profile-section .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-bottom: 5px; /* Space between input and any small text */
+}
+
+.company-profile-section .input-group small {
+    display: block;
+    color: #777;
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+/* Logo Upload Section */
+.logo-upload-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center; /* Center the logo and upload button */
+}
+
+.logo-preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items vertically in column */
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.logo-preview-container img {
+    max-width: 150px;
+    max-height: 80px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    object-fit: contain; /* Ensure logo fits without distortion */
+}
+
+.logo-upload-section input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.logo-upload-section .btn-upload {
+    display: inline-flex; /* Make the label act like a button */
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #6c757d; /* Reusing btn-secondary color */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.logo-upload-section .btn-upload:hover {
+    background-color: #5a6268;
+}
+
+/* Form Actions (reusing general form-actions from company_portal.css but ensuring centering) */
+.company-profile-section .form-actions {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 20px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    margin-top: 30px; /* Space above buttons */
+}
+
+.company-profile-section .form-actions .btn-primary,
+.company-profile-section .form-actions .btn-secondary {
+    width: auto; /* Allow buttons to size based on content */
+    min-width: 160px; /* Ensure a good minimum width */
+    margin-bottom: 0; /* Remove default margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .company-profile-section {
+        max-width: 90%;
+        padding: 20px;
+    }
+    .company-profile-section .form-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px;
+    }
+    .company-profile-section .form-actions .btn-primary,
+    .company-profile-section .form-actions .btn-secondary {
+        width: 100%; /* Full width when stacked */
+    }
+}

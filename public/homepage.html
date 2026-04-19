@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skillbridge - Kickstart Your Career</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f0faff;
+      color: #0a0a23;
+    }
+    header {
+      background: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .logo-container img {
+      height: 30px;
+    }
+    .nav-links a {
+      margin: 0 0.75rem;
+      text-decoration: none;
+      color: #0a0a23;
+      font-weight: 500;
+    }
+    .hero {
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #e3f0ff, #c8e8ff);
+      text-align: center;
+    }
+    .hero img {
+      max-width: 600px;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 1rem;
+    }
+    .btn { 
+      padding: 0.75rem 1.5rem;
+      background: #0047ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn a {
+      margin: 0rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+    .feature {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .feature-box {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      flex: 1 1 300px;
+    }
+    .feature-box img {
+      max-width: 80px;
+      margin-bottom: 1rem;
+    }
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .review-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 300px;
+      text-align: left;
+    }
+    
+    footer {
+      background: #0a0a23;
+      color: white;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #90caff;
+      text-decoration: none;
+    }
+    .footer-cols {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images\logo_black-removebg-preview.png" alt="Skillbridge Logo">
+    </div>
+    <div class="nav-links">
+      <a href="student\loginpage.html">Candidates</a>
+      <a href="company\login.html">Employers</a>
+      <a href="student\loginpage.html">Login</a>
+      <button class="btn" ><a href="student\signup.html">Sign Up</a></button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <img src="images\logo_black-removebg-preview.png" alt="Skillbridge Logo">
+    <h1>Kickstart Your Career Today.</h1>
+    <p>Land an Internship or entry-level job at cutting-edge startups, Fortune 500 companies, or anything in between.</p>
+    <button class="btn"><a href="student/loginpage.html">Start Applying</a></button>
+  </div>
+
+  <section>
+    <h2>Here's how it works.</h2>
+    <div class="feature">
+      <div class="feature-box">
+        <img src="https://img.icons8.com/ios/100/000000/resume.png" alt="Profile Icon">
+        <h3>1. Tell us about yourself</h3>
+        <p>Create a free profile to showcase your best self and get discovered by top employers.</p>
+      </div>
+      <div class="feature-box">
+        <img src="https://img.icons8.com/ios/100/000000/job.png" alt="Apply Icon">
+        <h3>2. Get applying</h3>
+        <p>Use our job matchmaker or browse by company, industry, or location to find your perfect fit.</p>
+      </div>
+      <div class="feature-box">
+        <img src="https://img.icons8.com/?size=100&id=66918&format=png&color=000000" alt="Celebrate Icon">
+        <h3>3. Celebrate</h3>
+        <p>You just got hired! Cue the dance party and get ready for your new career.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Our users love us. See for yourself.</h2>
+    <div class="reviews">
+      <div class="review-card">
+        <p>“SkillBridge constantly has great job postings and recruiting resources.”</p>
+        <strong>- Raphael R., NYU</strong>
+      </div>
+      <div class="review-card">
+        <p>“SkillBridge is a great platform... companies are reaching out every day trying to connect.”</p>
+        <strong>- Alexander C., UGA</strong>
+      </div>
+      <div class="review-card">
+        <p>“I’ve never used a platform like SkillBridge before. It was simple and helpful.”</p>
+        <strong>- Neha B., Georgia Tech</strong>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Stop scrolling, start interviewing.</h2>
+    <button class="btn"><a href="student/loginpage.html">Get Hired</a></button>
+  </section>
+
+  <footer>
+    <div class="footer-cols">
+      <div>
+        <strong>Company</strong><br>
+        <a href="#">About Us</a><br>
+        <a href="#">Press</a><br>
+        <a href="#">Careers</a>
+      </div>
+      <div>
+        <strong>Support</strong><br>
+        <a href="#">FAQs</a><br>
+        <a href="#">Contact Us</a>
+      </div>
+      <div>
+        <strong>Jobs</strong><br>
+        <a href="#">Entry Level Jobs</a><br>
+        <a href="#">Internships</a>
+      </div>
+    </div>
+    <p style="margin-top:2rem;">&copy; 2025 SkillBridge, Inc.</p>
+  </footer>
+</body>
+</html>

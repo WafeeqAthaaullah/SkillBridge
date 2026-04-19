@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Management</title>
+    <link rel="stylesheet" href="css/company_portal.css"> <link rel="stylesheet" href="css/student_profile_style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo">
+            <img src="../images/logo_white-removebg-preview.png" alt="Platform Logo">
+        </div>
+        <h1 class="dashboard-header-title">My Profile</h1>
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="student_dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="internships.html"><i class="fas fa-briefcase"></i> Internships</a></li>
+                <li><a href="student_applications.html"><i class="fas fa-file-alt"></i> My Applications</a></li>
+                <li><a href="student_profile.html" class="active"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="../logout.html" id="logoutButton"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile dropdown">
+            <span id="studentNameDisplay">Student Name</span>
+    </header>
+
+    <main class="dashboard-main-content">
+        <h2 class="dashboard-section-title">Manage Your Student Profile</h2>
+
+        <section class="student-profile-section form-card">
+            <h3 class="dashboard-section-subtitle">Personal Details</h3>
+            <form id="studentProfileForm">
+                <div class="input-group">
+                    <label for="profileName">Full Name:</label>
+                    <input type="text" id="profileName" required>
+                </div>
+                <div class="input-group">
+                    <label for="profileEmail">Email Address:</label>
+                    <input type="email" id="profileEmail" required>
+                </div>
+                <div class="input-group">
+                    <label for="profilePhone">Phone Number:</label>
+                    <input type="tel" id="profilePhone" placeholder="e.g., +1 (123) 456-7890">
+                </div>
+                <div class="input-group">
+                    <label for="profileMajor">Major/Field of Study:</label>
+                    <input type="text" id="profileMajor" placeholder="e.g., Computer Science, Business Analytics">
+                </div>
+                <div class="input-group">
+                    <label for="profileUniversity">University/Institution:</label>
+                    <input type="text" id="profileUniversity" placeholder="e.g., XYZ University">
+                </div>
+                <div class="input-group">
+                    <label for="profileGPA">GPA:</label>
+                    <input type="text" id="profileGPA" pattern="[0-9]{1}\.[0-9]{1,2}" placeholder="e.g., 3.5, 4.0">
+                    <small>Format: X.X or X.XX</small>
+                </div>
+                <div class="input-group">
+                    <label for="profileSkills">Skills (comma-separated):</label>
+                    <textarea id="profileSkills" rows="3" placeholder="e.g., JavaScript, Python, Data Analysis, Marketing"></textarea>
+                    <small>List your key skills, separated by commas.</small>
+                </div>
+
+                <div class="file-upload-group">
+                    <div class="input-group file-upload-item">
+                        <label for="profileResume">Resume/CV (PDF):</label>
+                        <input type="file" id="profileResume" accept=".pdf">
+                        <label for="profileResume" class="btn-secondary btn-upload"><i class="fas fa-upload"></i> Upload Resume</label>
+                        <span id="resumeFileName" class="file-name">No file selected.</span>
+                        <a href="#" id="viewResumeLink" class="link file-view-link" target="_blank" style="display:none;">View Current Resume <i class="fas fa-external-link-alt"></i></a>
+                        <small>Max file size: 5MB</small>
+                    </div>
+                    <div class="input-group file-upload-item">
+                        <label for="profileCoverLetter">Cover Letter (PDF, Optional):</label>
+                        <input type="file" id="profileCoverLetter" accept=".pdf">
+                        <label for="profileCoverLetter" class="btn-secondary btn-upload"><i class="fas fa-upload"></i> Upload Cover Letter</label>
+                        <span id="coverLetterFileName" class="file-name">No file selected.</span>
+                        <a href="#" id="viewCoverLetterLink" class="link file-view-link" target="_blank" style="display:none;">View Current Cover Letter <i class="fas fa-external-link-alt"></i></a>
+                        <small>Max file size: 2MB</small>
+                    </div>
+                </div>
+                
+                <div class="form-actions" style="justify-content: center;">
+                    <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Save Changes</button>
+                    <button type="button" id="resetProfileBtn" class="btn-secondary"><i class="fas fa-undo"></i> Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="scripts/student_profile.js"></script>
+</body>
+</html>

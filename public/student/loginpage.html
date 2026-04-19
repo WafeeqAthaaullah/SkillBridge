@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge - Log In</title>
+    <link rel="stylesheet" href="/student/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title">Let's get you hired</h1>
+            <p class="header-subtitle">SkillBridge is the go-to platform to land internships and entry-level jobs. Search opportunities, get career advice, and connect directly with employers.</p>
+        </header>
+
+        <main class="main-content">
+            <div class="form-card">
+                <h2 class="form-title">Welcome back!</h2>
+
+                <button class="social-login-button google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google logo" class="google-logo">
+                    Log In with Google
+                </button>
+
+                <div class="or-separator">
+                    <span>or log in with your email address</span>
+                </div>
+
+                <form class="login-form" id="studentLoginForm">
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+
+                    <div class="form-links">
+                        <a href="#" class="link forgot-password">Forgot your password?</a>
+                        <a href="/company/login" class="link employer-login">Are you an Employer? Log In here.</a>
+                    </div>
+                    <div class="form-links-bottom">
+                        <a href="#" class="link verification-email">Need another verification email?</a>
+                    </div>
+
+                    <button type="submit" class="login-button">Log In</button>
+                </form>
+
+                <div id="message" class="message" style="margin-top: 1rem; font-weight: 600;"></div>
+
+                <p class="signup-text">Don't have an account? <a href="/signup" class="link">Sign Up</a></p>
+            </div>
+        </main>
+
+
+    </div>
+
+    <script>
+    document.getElementById('studentLoginForm').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Prevent default form submission (page reload)
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const messageDiv = document.getElementById('message');
+
+        messageDiv.textContent = ''; // Clear previous messages
+        messageDiv.style.color = 'initial'; // Reset message color
+
+        try {
+            const response = await fetch('/api/auth/student/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await response.json();
+
+            // Check if HTTP status is 2xx AND if studentId is present in the response data
+            // We removed the `data.success` check because your server doesn't provide it.
+            if (response.ok && data.studentId) { // <--- CORRECTED CONDITION HERE!
+                localStorage.setItem('studentId', data.studentId); // <-- This line is crucial
+
+                messageDiv.textContent = data.message || 'Login successful!';
+                messageDiv.style.color = 'green';
+                
+                // Redirect to student dashboard on success
+                setTimeout(() => {
+                    window.location.href = '/student/dashboard'; 
+                }, 500); // Short delay for message to show
+            } else {
+                // This block will now correctly handle cases where:
+                // 1. response.ok is false (e.g., 401 Unauthorized, 404 Not Found)
+                // 2. response.ok is true, but data.studentId is missing/falsy (unlikely given your server response now)
+                messageDiv.textContent = data.message || 'Login failed. Please check your credentials.';
+                messageDiv.style.color = 'red';
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
+            messageDiv.textContent = 'An unexpected error occurred. Please try again later.';
+            messageDiv.style.color = 'red';
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,185 @@
+/* Styles specific to the Internship Listings page */
+
+.dashboard-main-content {
+    padding: 20px;
+}
+
+.dashboard-section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+/* Filter Section */
+.internship-filter-section {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.internship-filter-section .dashboard-section-subtitle {
+    text-align: left;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for filters */
+    gap: 20px;
+}
+
+.filter-grid .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+}
+
+.filter-grid .input-group input[type="text"],
+.filter-grid .input-group input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+.filter-grid .input-group small {
+    display: block;
+    color: #777;
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+/* Internship Listings Section */
+.internship-listings-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.internship-listings-section .dashboard-section-subtitle {
+    text-align: left;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.internship-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid for cards */
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Individual Internship Card Styles */
+.internship-card {
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px; /* Ensure consistent card height */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.internship-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.internship-card h4 {
+    font-size: 1.3em;
+    color: #007bff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.internship-card .card-company {
+    font-size: 1em;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.internship-card .card-info {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.internship-card .card-info i {
+    margin-right: 5px;
+    color: #007bff;
+}
+
+.internship-card .card-skills {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 10px;
+    word-break: break-word; /* Allow long skill lists to wrap */
+}
+
+.internship-card .card-actions {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.internship-card .card-actions .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* No internships message */
+.no-data {
+    text-align: center;
+    color: #888;
+    padding: 20px 0;
+    font-style: italic;
+    grid-column: 1 / -1; /* Make it span all columns in the grid */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .internship-filter-section,
+    .internship-listings-section {
+        max-width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .filter-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .internship-cards-container {
+        grid-template-columns: 1fr; /* Single column for internship cards */
+    }
+    .internship-card {
+        min-height: unset; /* Allow height to adjust naturally */
+    }
+    .form-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .form-actions .btn-primary,
+    .form-actions .btn-secondary {
+        width: 100%;
+    }
+}

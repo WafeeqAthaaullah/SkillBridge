@@ -1,0 +1,155 @@
+/* Styles specific to the Internship Detail View page */
+
+.dashboard-main-content {
+    padding: 20px;
+}
+
+.internship-detail-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.loading-message {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 50px 0;
+}
+
+.internship-title {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.company-name {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.detail-section-subtitle {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee;
+}
+
+.detail-item {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #444;
+}
+
+.detail-item i {
+    color: #007bff;
+    margin-right: 10px;
+    width: 20px; /* Align icons */
+    text-align: center;
+}
+
+.detail-item strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.internship-description p {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1em;
+}
+
+.skills-list {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.skill-badge {
+    display: inline-block;
+    background-color: #e9f5ff;
+    color: #007bff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    border: 1px solid #cce5ff;
+}
+
+.detail-actions {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.detail-actions .btn-primary,
+.detail-actions .btn-secondary {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    width: auto;
+    min-width: 180px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Fallback for error/not found */
+.error-message {
+    text-align: center;
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 50px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .internship-detail-section {
+        max-width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .internship-title {
+        font-size: 1.8em;
+    }
+    .company-name {
+        font-size: 1.2em;
+    }
+    .detail-section-subtitle {
+        font-size: 1.4em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .detail-item {
+        font-size: 1em;
+    }
+    .detail-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    .detail-actions .btn-primary,
+    .detail-actions .btn-secondary {
+        width: 100%;
+        min-width: unset;
+    }
+}

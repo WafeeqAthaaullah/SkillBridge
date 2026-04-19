@@ -1,0 +1,135 @@
+/* Styles specific to the Logout page */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Light background */
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.logout-container {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logout-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    box-sizing: border-box;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.logout-icon {
+    font-size: 4em;
+    color: #007bff;
+    margin-bottom: 25px;
+    animation: bounceIn 1s ease-out;
+}
+
+.logout-card h2 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.logout-card p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.logout-actions {
+    display: flex;
+    flex-direction: column; /* Stack buttons by default */
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.logout-actions .btn-primary,
+.logout-actions .btn-secondary {
+    display: flex; /* Use flex for button content */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.logout-actions .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.logout-actions .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.logout-actions .btn-secondary {
+    background-color: #f8f9fa;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.logout-actions .btn-secondary:hover {
+    background-color: #e2f0fe;
+    transform: translateY(-2px);
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% { opacity: 0; -webkit-transform: scale3d(.3, .3, .3); transform: scale3d(.3, .3, .3); }
+    20% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); }
+    40% { -webkit-transform: scale3d(.9, .9, .9); transform: scale3d(.9, .9, .9); }
+    60% { opacity: 1; -webkit-transform: scale3d(1.03, 1.03, 1.03); transform: scale3d(1.03, 1.03, 1.03); }
+    80% { -webkit-transform: scale3d(.97, .97, .97); transform: scale3d(.97, .97, .97); }
+    100% { opacity: 1; -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+}
+
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+    .logout-actions {
+        flex-direction: row; /* Row for wider screens */
+        justify-content: center;
+    }
+    .logout-actions .btn-primary,
+    .logout-actions .btn-secondary {
+        min-width: unset; /* Remove min-width for larger screens */
+        flex: 1; /* Allow them to grow equally */
+    }
+}

@@ -1,0 +1,661 @@
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4a90e2, #2d5b8d); /* Blue gradient background */
+    display: flex;
+    flex-direction: column; /* Allow header, main, footer to stack */
+    min-height: 100vh;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Global Container for Centering Content on Auth Pages */
+.auth-container { /* Renamed from .container to differentiate */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto; /* Center the container for auth pages */
+}
+
+/* Header Styles (for Auth Pages) */
+.auth-header { /* Renamed from .header to differentiate */
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.logo img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header-subtitle {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Specific styling for the Post Internship Form Card */
+.post-internship-form-section {
+    max-width: 950px; /* Increased max-width for the form card specifically */
+    margin: 0 auto; /* Center the form card within its section */
+    padding: 40px; /* Ensure ample padding inside the card */
+}
+
+.post-internship-form-section .input-group {
+    text-align: left; /* Align labels and inputs to the left within the larger card */
+    margin-bottom: 20px; /* Add more space between input groups */
+}
+
+.post-internship-form-section .input-group label {
+    display: block; /* Make labels block elements for vertical stacking */
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: 500;
+    color: #444;
+}
+
+.post-internship-form-section .input-group input,
+.post-internship-form-section .input-group textarea {
+    width: 100%; /* Make inputs/textareas take full width of their container */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Main Content - Form Card (for Auth Pages) */
+.auth-main-content { /* Renamed from .main-content to differentiate */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.auth-main-content { /* Renamed from .main-content to differentiate */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.form-card { /* Kept name as it's a specific card style */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* REMOVE THIS LINE: text-align: center; */
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.form-title {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center; /* Apply centering only where explicitly needed, like titles */
+}
+
+
+/* Global Form Actions Styling */
+.form-actions {
+    margin-top: 30px;
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center items horizontally */
+    gap: 30px; /* Increased space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    /* text-align: right;  <-- REMOVED THIS LINE */
+    /* Removed .justify-center class as it's now handled by base .form-actions */
+}
+
+/* Ensure buttons within form-actions respect their sizing */
+.form-actions .btn-primary,
+.form-actions .btn-secondary {
+    width: auto; /* Allow buttons to size based on content */
+    min-width: 180px; /* Increased minimum width for buttons */
+    margin-bottom: 0;
+}
+
+/* Small adjustment for form labels on white cards */
+.form-card .input-group label {
+    color: #555; /* Darker than default header text */
+}
+
+.social-login-button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 12px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    color: #555;
+    text-decoration: none;
+}
+
+.social-login-button:hover {
+    background-color: #f5f5f5;
+}
+
+.google-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.or-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    color: #888;
+}
+
+.or-separator::before,
+.or-separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.or-separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.or-separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea { /* Added select and textarea */
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #aaa;
+}
+
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85em;
+    margin-bottom: 15px;
+}
+
+.form-links-bottom {
+    text-align: left;
+    font-size: 0.85em;
+    margin-bottom: 25px;
+}
+
+.link {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.btn-primary, .login-button { /* Common button style */
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Default to full width for consistency with forms */
+    margin-bottom: 20px; /* Spacing for auth buttons */
+    box-sizing: border-box; /* For consistent sizing */
+    text-decoration: none; /* In case it's an anchor */
+    display: inline-block; /* Allows padding and width */
+    text-align: center; /* Center text */
+}
+
+.btn-primary:hover, .login-button:hover {
+    background-color: #357ABD;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.signup-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0;
+}
+
+/* Footer Styles (for Auth Pages) */
+.auth-footer { /* Renamed from .footer to differentiate */
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9em;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-text {
+    margin-bottom: 30px;
+}
+
+.company-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.company-logo {
+    height: 40px;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+}
+
+/* --- Dashboard Specific Styles --- */
+
+.dashboard-header {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.dashboard-header .logo img {
+    height: 40px; /* Smaller logo for header */
+    width: auto;
+    filter: brightness(0) invert(1); /* Keep white */
+    margin-bottom: 0;
+}
+
+.dashboard-header-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+    flex-grow: 1; /* Allows title to take available space */
+    padding-left: 20px;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.dashboard-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.dashboard-nav a:hover,
+.dashboard-nav a.active {
+    color: var(--link-hover-color, #E0F2F7); /* Lighter blue for hover */
+    text-decoration: underline;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.dashboard-main-content {
+    flex-grow: 1; /* Takes up remaining space */
+    width: 100%;
+    max-width: 1400px; /* Increased max width for dashboard content */
+    margin: 40px auto; /* Centered with vertical spacing */
+    padding: 0 40px; /* Increased padding to give more overall width */
+    box-sizing: border-box;
+}
+
+.dashboard-section-title {
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.dashboard-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-card .icon {
+    font-size: 2.5em;
+    color: #4a90e2;
+    margin-bottom: 15px;
+}
+
+.stat-card .value {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.stat-card .label {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.dashboard-actions,
+.dashboard-recent-activity {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.dashboard-section-subtitle {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: left; /* Align subtitle to left */
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center buttons */
+}
+
+.action-buttons .btn-primary,
+.action-buttons .btn-secondary {
+    width: auto; /* Allow buttons to size based on content */
+    min-width: 180px; /* Ensure a minimum width */
+    margin-bottom: 0; /* Remove default margin from form-card */
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-item .details {
+    flex-grow: 1;
+}
+
+.activity-item .title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.activity-item .info {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.activity-item .status {
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.status.pending { background-color: #ffeb3b; color: #333; } /* Yellow */
+.status.reviewed { background-color: #8bc34a; color: white; } /* Green */
+.status.interviewed { background-color: #2196f3; color: white; } /* Blue */
+
+/* Dashboard Footer */
+.dashboard-footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9em;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .dashboard-header {
+        padding: 10px 20px;
+    }
+    .dashboard-nav ul {
+        gap: 15px;
+    }
+    .dashboard-header-title {
+        font-size: 1.2em;
+    }
+    .dashboard-main-content {
+        margin: 20px auto;
+        padding: 0 15px;
+        max-width: 100%; /* Allow wider range on smaller screens */
+    }
+    .dashboard-stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    .stat-card {
+        padding: 25px;
+    }
+    .stat-card .value {
+        font-size: 2em;
+    }
+    .dashboard-section-title {
+        font-size: 1.8em;
+    }
+    .post-internship-form-section {
+        max-width: 850px; /* Slightly reduced for medium screens */
+    }
+    .form-actions {
+        gap: 20px; /* Reduce button gap slightly on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Auth Page specific responsive adjustments */
+    .auth-header .header-title {
+        font-size: 2em;
+    }
+
+    .auth-header .header-subtitle {
+        font-size: 1em;
+        padding: 0 15px;
+    }
+
+    .form-card {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+
+    .auth-footer .company-logos {
+        gap: 20px;
+    }
+
+    .auth-footer .company-logo {
+        height: 35px;
+    }
+
+    /* Dashboard specific responsive adjustments */
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .dashboard-header-title {
+        padding-left: 0;
+    }
+    .dashboard-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .user-profile {
+        margin-top: 10px;
+        margin-left: 0; /* Reset for stacked layout */
+    }
+    .dashboard-stats-grid {
+        grid-template-columns: 1fr; /* Stack on small screens */
+    }
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .action-buttons .btn-primary,
+    .action-buttons .btn-secondary {
+        width: 100%; /* Full width for buttons */
+    }
+    .post-internship-form-section {
+        max-width: 100%; /* Allow form to take full width on small screens */
+        padding: 25px 20px;
+    }
+    .post-internship-form-section .input-group {
+        margin-bottom: 15px;
+    }
+    .form-actions {
+        flex-direction: column; /* Stack buttons vertically on very small screens */
+        gap: 15px; /* Adjust gap for vertical stacking */
+    }
+    .form-actions .btn-primary,
+    .form-actions .btn-secondary {
+        width: 100%; /* Full width when stacked */
+        min-width: unset; /* Remove min-width when stacked */
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-header .header-title {
+        font-size: 1.8em;
+    }
+
+    .form-title {
+        font-size: 1.5em;
+    }
+
+    .social-login-button, .login-button, .input-group input {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+
+    .link, .signup-text {
+        font-size: 0.8em;
+    }
+
+    .auth-footer .company-logos {
+        gap: 20px;
+    }
+
+    .auth-footer .company-logo {
+        height: 30px;
+    }
+
+    .dashboard-section-title {
+        font-size: 1.5em;
+    }
+    .stat-card .value {
+        font-size: 1.8em;
+    }
+    .stat-card .label {
+        font-size: 1em;
+    }
+    .dashboard-section-subtitle {
+        font-size: 1.2em;
+    }
+}

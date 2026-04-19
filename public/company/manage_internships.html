@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Internships</title>
+    <link rel="stylesheet" href="css/company_portal.css"> <link rel="stylesheet" href="css/manage_internships_style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo">
+            <img src="../images/logo_white-removebg-preview.png" alt="SkillBridge logo">
+        </div>
+        <h1 class="dashboard-header-title">Manage Internships</h1>
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="company_dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="manage_internships.html" class="active"><i class="fas fa-briefcase"></i> Internships</a></li>
+                <li><a href="view_applications.html"><i class="fas fa-users"></i> Applications</a></li>
+                <li><a href="company_profile.html"><i class="fas fa-building"></i> Profile</a></li>
+                <li><a href="../logout.html" id="logoutButton"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile">
+            <span id="companyNameDisplay">Company Name</span>
+            <i class="fas fa-caret-down"></i>
+            </div>
+    </header>
+
+    <main class="dashboard-main-content">
+        <h2 class="dashboard-section-title">Your Posted Opportunities</h2>
+
+        <section class="internship-management-section">
+            <div class="internship-list-grid">
+                <p id="noInternshipsMessage" class="info-message" style="display: none;">
+                    You haven't posted any internships yet. <a href="post_internship.html" class="link">Post one now!</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/manage_internships.js"></script>
+</body>
+</html> 

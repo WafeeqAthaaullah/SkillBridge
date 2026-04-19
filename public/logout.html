@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged Out</title>
+    <link rel="stylesheet" href="student\css\company_portal.css"> <link rel="stylesheet" href="logout.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="logout-container">
+        <div class="logout-card">
+            <i class="fas fa-sign-out-alt logout-icon"></i>
+            <h2>You have been logged out.</h2>
+            <p>Thank you for using our platform.</p>
+            <div class="logout-actions">
+                <a href="company/login.html" class="btn-primary"><i class="fas fa-building"></i> Company Login</a>
+                <a href="student/loginpage.html" class="btn-secondary"><i class="fas fa-user-graduate"></i> Student Login</a>
+            </div>
+            <p class="copyright">&copy; 2025 Internship Platform. All rights reserved.</p>
+        </div>
+    </div>
+    <script src="scripts/data_store.js"></script>
+    <script>
+        // Immediately trigger logout when the logout page is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof DataStore !== 'undefined') {
+                // Determine if a company or student was logged in and log them out
+                // This is a simple heuristic; a real system would use server-side session management
+                const currentCompanyId = DataStore.getCurrentCompanyId();
+                const currentStudentProfile = DataStore.getStudentProfile(); // Checks if a student ID is stored
+
+                if (currentCompanyId) {
+                    DataStore.logoutCompanyUser();
+                    console.log("Company user logged out.");
+                } else if (currentStudentProfile && currentStudentProfile.id) { // Check if a student profile exists (indicating potential login)
+                    DataStore.logoutStudentUser();
+                    console.log("Student user logged out.");
+                }
+            } else {
+                console.error("DataStore not available. Cannot perform logout operation.");
+            }
+        });
+    </script>
+</body>
+</html>

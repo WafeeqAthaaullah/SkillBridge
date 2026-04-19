@@ -1,0 +1,220 @@
+/* Styles specific to the Internship Application page */
+
+.dashboard-main-content {
+    padding: 20px;
+}
+
+.internship-apply-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.apply-title {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.apply-company {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.form-instruction {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border: 1px solid #cce5ff;
+    border-radius: 8px;
+}
+
+.form-instruction a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-instruction a:hover {
+    text-decoration: underline;
+}
+
+.internship-apply-section .dashboard-section-subtitle {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+/* Input groups (reusing from company_portal.css but refining) */
+.internship-apply-section .input-group {
+    margin-bottom: 20px;
+}
+
+.internship-apply-section .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+}
+
+.internship-apply-section .input-group input[type="text"],
+.internship-apply-section .input-group input[type="email"],
+.internship-apply-section .input-group input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Slightly different background for read-only */
+    color: #555;
+}
+
+.internship-apply-section .input-group input[readonly],
+.internship-apply-section .input-group input[disabled] {
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    color: #6c757d;
+}
+
+
+/* File Upload Group specific to Application */
+.file-upload-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.file-upload-item {
+    flex: 1;
+    min-width: 300px;
+    border: 1px dashed #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fcfcfc;
+}
+
+.file-upload-item .file-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+    word-break: break-all;
+    font-weight: 600; /* Current file name stands out */
+}
+
+.file-upload-item .file-view-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.file-upload-item .file-view-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.upload-new-option {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.upload-new-option input[type="file"] {
+    display: none;
+}
+
+.upload-new-option .btn-upload-small {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.upload-new-option .btn-upload-small:hover {
+    background-color: #5a6268;
+}
+
+.upload-new-option .new-file-name {
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #777;
+    font-weight: normal; /* New file name is less prominent initially */
+}
+
+
+/* Form Actions */
+.internship-apply-section .form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.internship-apply-section .form-actions .btn-primary,
+.internship-apply-section .form-actions .btn-secondary {
+    width: auto;
+    min-width: 180px;
+    margin-bottom: 0;
+    font-size: 1.1em;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .internship-apply-section {
+        max-width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .apply-title {
+        font-size: 1.6em;
+    }
+    .apply-company {
+        font-size: 1em;
+    }
+    .internship-apply-section .dashboard-section-subtitle {
+        font-size: 1.4em;
+    }
+    .file-upload-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .file-upload-item {
+        min-width: unset;
+    }
+    .internship-apply-section .form-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .internship-apply-section .form-actions .btn-primary,
+    .internship-apply-section .form-actions .btn-secondary {
+        width: 100%;
+    }
+}
