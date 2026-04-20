@@ -20,23 +20,7 @@ SkillBridge is a full-stack **Node.js** web application designed to connect stud
       - `mysql2`: Promise-based MySQL client.
       - `nodemon`: Development tool for automatic server restarts.
 
-## Project Structure
 
-``` text
-project-root/
-├── public/             # Client-side static files (HTML, CSS, JS)
-│   ├── css/            # Page-specific stylesheets
-│   ├── scripts/        # Client-side API fetch logic
-│   └── student/        # Student-facing HTML views
-├── server/             # Backend logic
-│   ├── apiHandlers/    # Request handlers for various endpoints
-│   ├── db/             # Database connection and queries
-│   ├── index.js        # Main server entry point
-│   └── setup_database.js # Database initialization script
-├── .env                # Environment configuration (DB credentials)
-└── package.json        # Dependencies and scripts
-
-```
 
 ## Getting Started
 
